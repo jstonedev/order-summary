@@ -1,0 +1,200 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body,
+html {
+	min-width: 100%;
+	min-height: 100vh;
+}
+
+body {
+	background: 100% / cover url("/assets/zigzag-bg.png");
+}
+
+h2,
+h4 {
+	color: #2f463d;
+}
+
+h2,
+h4,
+h5,
+a,
+button {
+	font-family: Montserrat;
+}
+
+.pannel {
+	width: 330px;
+	height: 625px;
+	background-color: #fff;
+	margin: 70px auto;
+	box-shadow: 0px 40px 40px -20px #3c7b61;
+	border-radius: 5px;
+	position: relative;
+}
+
+.close-btn {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+}
+
+.content-container {
+	width: 100%;
+	text-align: center;
+	padding: 65px 25px;
+}
+
+.content-container > img {
+	width: 50%;
+}
+
+.content-container > h2 {
+	font-size: 22px;
+	font-weight: 600;
+	margin: 20px 0 10px;
+	height: 40px;
+}
+
+.content-container > p {
+	font-family: Ubuntu;
+	font-size: 14px;
+	line-height: 26px;
+	color: #828282;
+}
+
+.food-container {
+	display: flex;
+	align-items: center;
+	margin-top: 35px;
+	border-radius: 5px;
+	background-color: #f0fff5;
+}
+
+.food-container > a {
+	font-weight: 700;
+	font-size: 13px;
+	color: #467a66;
+	padding: 0 20px;
+}
+
+.food-description {
+	width: 50%;
+	text-align: left;
+	padding-left: 16px;
+}
+
+.food-description > h4 {
+	font-size: 14px;
+	font-weight: 800;
+	margin-bottom: 3px;
+}
+
+.food-description > h5 {
+	font-size: 14px;
+	font-weight: 500;
+	color: #7a8f85;
+}
+
+.main-btn {
+	cursor: pointer;
+	width: 100%;
+	padding: 15px 0;
+	color: #fff;
+	font-size: 15px;
+	font-weight: 700;
+	margin-top: 30px;
+	border: none;
+	border-radius: 5px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	transition: 0.3s ease-in-out all;
+}
+
+#ready-btn {
+	background-color: #46a67e;
+}
+
+#ready-btn:hover {
+	background-color: #95d6a4;
+	transition: 0.3s ease-in-out all;
+}
+
+.dots-container {
+	display: flex;
+	width: 15%;
+	justify-content: space-between;
+	position: absolute;
+	left: 50%;
+	bottom: 6%;
+	transform: translateX(-50%);
+}
+
+.dot {
+	width: 8px;
+	height: 8px;
+	background-color: #e0e0e0;
+	border-radius: 50%;
+}
+
+.active-dot {
+	background-color: #67bd99;
+}
+
+.left-pannel,
+.right-pannel {
+	display: none;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 1200px) {
+	body {
+		background: #46a67e;
+	}
+
+	.flex-container {
+		width: 1240px;
+		display: flex;
+		justify-content: center;
+		margin: auto;
+		align-items: center;
+	}
+
+	.pannel {
+		margin: 70px 0;
+	}
+
+	.center-pannel {
+		z-index: 9;
+		width: 370px;
+	}
+
+	.left-pannel,
+	.right-pannel {
+		display: block;
+		height: 575px;
+		z-index: 1;
+	}
+
+	.left-pannel h2,
+	.right-pannel h2 {
+		margin: 45px 0 25px;
+	}
+
+	.left-pannel {
+		margin-right: -15px;
+	}
+
+	.right-pannel {
+		margin-left: -15px;
+	}
+
+	.inactive-btn {
+		cursor: default;
+		background: #bdbdbd;
+	}
+}
